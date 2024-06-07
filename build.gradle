@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.HeChu'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation group:'org.xerial', name:'sqlite-jdbc', version:'3.46.0.0'
+    implementation 'com.auth0:java-jwt:4.4.0'
+}
+
+test {
+    useJUnitPlatform()
+}
